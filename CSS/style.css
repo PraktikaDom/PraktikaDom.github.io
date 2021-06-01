@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ledger&display=swap');
+@font-face {
+	font-family: "AvenirNextCyr"; 
+	src: url("../Fonts/AvenirNextCyr-Regular.ttf") format("truetype"); 
+} 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body,html{
+	background: #f4f5f6;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: space-between;
+	height: 100%;
+}
+
+/* Cтилізация тега-посилання <a> */
+
+a {text-decoration: none;}
+
+/*Header*/
+
+.header {
+	display: block;
+	width: 100%;
+	height: 62px;
+	padding: 10px 30px;
+	background-color: #40464f;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.label-logo{
+	width: 356px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.logo{
+	display: block;
+	width: 42px;
+    height: 42px;
+    cursor: pointer;
+}
+.header-text{
+	width: 299px;
+	height: 24px;
+	font-family: PlayfairDisplay;
+	font-size: 18px;
+	font-weight: 500;
+	color: white;
+}
+.nav {
+	width: 47.9%;
+	min-width: 654px;
+	display: flex;
+	justify-content: space-around;
+
+}
+.nav__link {
+	display: inline-block;
+	font-family: AvenirNextCyr;
+	font-size: 18px;
+	color: white;
+	position: relative;
+	transition: color .1s linear;
+}
+
+.nav__link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #e8b32e;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    transition: opacity .1s linear;
+}
+.nav__link:hover {
+    color: #e8b32e;
+}
+.nav__link:hover:after, .nav__link.active:after {
+    opacity: 1;
+}
+.nav__link.active {
+    color: #e8b32e;
+}
+
+/*Main_intro*/
+
+.intro{
+	flex-grow: 1;
+	padding: 80px 0 40px 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.h4{
+	width: 780px;
+    height: 100px;
+	display: block;
+	font-family: Ledger;
+	font-size: 36px;
+	text-align: center;
+	color: #212121;
+	font-weight: normal;
+}
+.intro-text{
+  width: 780px;
+  height: 75px;
+  margin: 40px 0;
+  font-family: AvenirNextCyr;
+  font-size: 21px;
+  text-align: center;
+  color: #212121;
+}
+.intro-buttons{
+	display: flex;
+	justify-content: space-between;
+	width: 235px;
+	z-index: 0;
+	margin-bottom: 40px;
+	text-decoration: none;
+}
+.intro-button{
+	text-transform: uppercase;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #e8b32e;
+    font-family: AvenirNextCyr;
+  	font-size: 18px;
+  	font-weight: 500;
+  	color: #fff;
+  	border: none;
+  	z-index: 1;
+  	cursor: pointer;
+}
+.intro-pic{
+	width: 492px;
+	height: 451px;
+	object-fit: contain;
+}
+
+/*pupil_item*/
+
+.pupil-wrapper{
+	width: 940px;
+	padding-top: 70px;	
+}
+.pupil-header{
+	width: 940px;
+    height: 130px;
+    padding: 40px 0px 40px 30px;
+    border-radius: 5px;
+    background-color: #749bd2;
+    font-family: Ledger;
+  	font-size: 36px;
+  	color: #ffffff;
+  	display: flex;
+  	justify-content: space-between;
+}
+.Pic_pupil_item{
+	display: block;
+	width: 380px;
+    height: 200px;
+    object-fit: contain;
+    margin-left: -50px;
+    margin-top: -110px;
+}
+
+/*Footer*/
+
+.footer{
+	width: 100%;
+	height: 110px;
+	padding: 20px 0 15px 0;
+	background-color: #40464f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer_text{
+	font-family: AvenirNextCyr;
+	font-size: 10px;
+	color: #9aa2ac;
+}
