@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+    <defs>
+        <filter id="bred15z3ma" color-interpolation-filters="auto">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.603922 0 0 0 0 0.635294 0 0 0 0 0.674510 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g filter="url(#bred15z3ma)" transform="translate(-920 -701) translate(490 142) translate(400 534)">
+                    <g>
+                        <path d="M0 0L77 0 77 77 0 77z" opacity=".87" transform="translate(30 25)"/>
+                        <path fill="#000" fill-rule="nonzero" d="M67.375 25.667H47.13l3.048-14.662.097-1.027c0-1.316-.546-2.535-1.412-3.4l-3.4-3.37L24.35 24.351c-1.187 1.155-1.893 2.76-1.893 4.524v32.083c0 3.53 2.888 6.417 6.417 6.417H57.75c2.663 0 4.94-1.604 5.903-3.914l9.69-22.619c.288-.738.449-1.508.449-2.342v-6.417c0-3.529-2.888-6.416-6.417-6.416zm0 12.833L57.75 60.958H28.875V28.875l13.924-13.924-3.561 17.132h28.137V38.5zM3.208 28.875h12.834v38.5H3.208v-38.5z" transform="translate(30 25)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
