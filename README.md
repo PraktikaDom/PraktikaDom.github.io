@@ -1,1 +1,1 @@
-# polit.github.io
+# PraktikaDom.github.io
