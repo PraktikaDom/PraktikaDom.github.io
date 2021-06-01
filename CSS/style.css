@@ -167,7 +167,7 @@ a {text-decoration: none;}
     font-weight: 500;
     color: #e8b32e;
 }
-.pupil-link{
+.pupil-link, .teacher-link{
     height: 22px;
     display: flex;
     align-items: center;
@@ -284,6 +284,19 @@ a {text-decoration: none;}
 	margin-top: 0;
 }
 
+/**/
+.Pic_teacher_item {
+	width: 450px;
+	height: 167px;
+	object-fit: contain;
+	margin-right: 10px;
+	margin-top: -77px;
+}
+.teacher-wrapper{
+	width: 940px;
+	padding-top: 40px;	
+	margin-bottom: 40px;
+}
 
 /*Footer*/
 

@@ -7,4 +7,8 @@ $(document).ready(function() {
         window.location.href = 'group_item.html';
     });
 
+   $(".teacher-link").click(function(){
+        window.location.href = 'teachers.html';
+    });
+
 });	

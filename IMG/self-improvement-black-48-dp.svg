@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+    <defs>
+        <filter id="u8y2tdf6va" color-interpolation-filters="auto">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.603922 0 0 0 0 0.635294 0 0 0 0 0.674510 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g filter="url(#u8y2tdf6va)" transform="translate(-920 -521) translate(490 142) translate(400 354)">
+                    <g>
+                        <path d="M0 0H77V77H0z" transform="translate(30 25)"/>
+                        <g fill="#000" fill-rule="nonzero" transform="translate(30 25) translate(15 16)">
+                            <circle cx="23" cy="5.75" r="5.75"/>
+                            <path d="M46 30.667v-3.834c-6.402 0-12.573-3.258-15.755-8.28-1.303-2.108-3.757-3.22-6.21-3.22h-2.07c-2.453 0-4.907 1.112-6.21 3.22-3.182 5.022-9.353 8.28-15.755 8.28v3.834c7.667 0 13.455-2.875 17.25-7.514v9.392L6.632 37.107c-1.687.766-2.799 2.415-2.799 4.255C3.833 43.93 5.903 46 8.472 46h6.861v-.958c0-3.68 3.029-6.709 6.709-6.709h7.666c.537 0 .959.422.959.959 0 .536-.422.958-.959.958h-7.666c-2.645 0-4.792 2.147-4.792 4.792V46h20.278c2.569 0 4.639-2.07 4.639-4.638 0-1.84-1.112-3.527-2.799-4.255L28.75 32.583v-9.391c3.795 4.6 9.583 7.475 17.25 7.475z"/>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
