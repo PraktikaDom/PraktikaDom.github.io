@@ -18,6 +18,29 @@ body,html{
 	height: 100%;
 }
 
+/* Cтилізация полоси прокручування */
+
+::-webkit-scrollbar {
+    width: inherit;
+}
+
+::-webkit-scrollbar-track {
+	width: inherit;
+    background: #d4d4d4;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .2) inset;
+}
+
+::-webkit-scrollbar-thumb {
+	width: inherit;
+    background: #939393;
+    border-radius: 8px;
+    border: 0.75vh solid #d4d4d4;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7c7c7c;
+}
+
 /* Cтилізация тега-посилання <a> */
 
 a {text-decoration: none;}
