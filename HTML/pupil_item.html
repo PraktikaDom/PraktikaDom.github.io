@@ -6,6 +6,8 @@
 	<title>Все про учня</title>
 	<link rel="stylesheet" href="../CSS/style.css">
 	<link rel="icon" href="../IMG/logo.ico" sizes="32x32">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="../JS/script_pupil_item.js"></script>
 </head>
 <body>
 	<header class="header">
@@ -19,7 +21,7 @@
 			<a href="../index.html" class="nav__link">Головна</a>
 			<a href="groups.html" class="nav__link">Групи</a>
 			<a href="teachers.html" class="nav__link">Учителі</a>
-			<a href="contacs.html" class="nav__link">Контакти</a>
+			<a href="contacts.html" class="nav__link">Контакти</a>
 		</nav>
 
 		<div class="label-logo"></div>
@@ -33,7 +35,7 @@
 				<div class="pupil-link__a" href="group_item.html">Повернутися до групи</div>
 			</div>
 			<div class="pupil-header">
-				<div class="pupil-id_name">Петров Петро Петрович </div>
+				<div class="pupil-id_name"></div>
 				<img src="../IMG/pic-pupil-item.png" srcset="../IMG/pic-pupil-item@2x.png 2x, ../IMG/pic-pupil-item@3x.png 3x" class="Pic_pupil_item">
 			</div>
 
@@ -106,30 +108,5 @@
 		<div class="footer_text">© Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</div>
 		
 	</footer>
-
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="../JS/script.js"></script>
-	<script type="text/javascript">
-x = prompt();
-async function getResponsePupil(user_id){
-   	let response = await fetch(`https://alexmarchukprod.com.ua/student?id=${user_id}`);
-   	let content = await response.json(); 
-   	let pht=`url("${content.photo}")`;
-   	let key;
-   	let list_school = document.querySelector('.pupil-text_ul-school');
-   	let list_interests = document.querySelector('.pupil-text__interests');
-   	let list_achivement = document.querySelector('.pupil-text__achivement');
-   	$('.pupil-photo').css('background-image', pht)
-   	$('.pupil-id_name').text(content.surname + " "+content.name+" " +content.patronymic); 	
-   	$('.pupil-text__data').text(content.birthday);
-	$('.pupil-text__email').text(content.email);
-	$('.pupil-text__subject').text(content.favoriteSubject);
-	$('.pupil-text__description').text(content.description);
-	for (key in content.olympicReserve) list_school.innerHTML+=`<li>${content.olympicReserve[key]}</li>`
-	for (key in content.interests) list_interests.innerHTML+=`<li>${content.interests[key]}</li>`
-	for (key in content.achievements) list_achivement.innerHTML+=`<li>${content.achievements[key]}</li>`
-}
-getResponsePupil(x);		
-	</script>
 </body>
 </html>
