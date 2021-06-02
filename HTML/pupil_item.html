@@ -33,9 +33,10 @@
 				<div class="pupil-link__a" href="group_item.html">Повернутися до групи</div>
 			</div>
 			<div class="pupil-header">
-				<div class="pupil-id_name">Петров Петро Петрович</div>
+				<div class="pupil-id_name">Петров Петро Петрович </div>
 				<img src="../IMG/pic-pupil-item.png" srcset="../IMG/pic-pupil-item@2x.png 2x, ../IMG/pic-pupil-item@3x.png 3x" class="Pic_pupil_item">
 			</div>
+
 			<div class="pupil-info">
 				<div class="pupil-info__in pupil-photo"></div>
 				<div class="pupil-DES">
@@ -43,9 +44,8 @@
 						<img class="pupil-img" src="../IMG/cake-black-48-dp.svg">
 						<div class="pupil-text">
 							<div class="pupil-text__name">Дата народження</div>
-							<div class="pupil-text__descrip">01.01.1998</div>
+							<div class="pupil-text__descrip pupil-text__data">01.01.1998</div>
 						</div>
-
 					</div>
 					<div class="pupil-info__in pupil-email">
 						<img class="pupil-img" src="../IMG/email-black-48-dp.svg">
@@ -58,7 +58,7 @@
 						<img class="pupil-img" src="../IMG/thumb-up-alt-black-48-dp.svg">
 						<div class="pupil-text">
 							<div class="pupil-text__name">Улюблений предмет</div>
-							<div class="pupil-text__descrip">Фізкультура</div>
+							<div class="pupil-text__descrip pupil-text__subject">Фізкультура</div>
 						</div>
 					</div>
 				</div>
@@ -66,17 +66,15 @@
 					<img class="pupil-img" src="../IMG/text-snippet-black-48-dp.svg">
 					<div class="pupil-text">
 						<div class="pupil-text__name">Короткий опис про себе</div>
-						<div class="pupil-text__descrip">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+						<div class="pupil-text__descrip pupil-text__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
 					</div>
 				</div>
 				<div class="pupil-info__in pupil-school">
 					<img class="pupil-img" src="../IMG/school-black-48-dp.svg">
 					<div class="pupil-text">
 						<div class="pupil-text__name">Школа олімпійського резерву</div>
-						<ul class="pupil-text__descrip">
-								<li>Факультатив 1</li>
-								<li>Факультатив 2</li>
-							</ul>
+						<ul class="pupil-text__descrip pupil-text_ul-school">
+						</ul>
 					</div>
 				</div>
 				<div class="pupil-IA">
@@ -85,9 +83,6 @@
 						<div class="pupil-text">
 							<div class="pupil-text__name">Список інтересів</div>
 							<ul class="pupil-text__descrip pupil-text__interests">
-								<li>Назва 1</li>
-								<li>Назва 2</li>
-								<li>Назва 3</li>
 							</ul>
 						</div>
 					</div>
@@ -95,10 +90,7 @@
 						<img class="pupil-img" src="../IMG/workspace-premium-black-48-dp.svg">
 						<div class="pupil-text">
 							<div class="pupil-text__name">Досягнення</div>
-							<ul class="pupil-text__descrip">
-								<li>Назва 1</li>
-								<li>Назва 2</li>
-								<li>Назва 3</li>
+							<ul class="pupil-text__descrip pupil-text__achivement">
 							</ul>
 						</div>
 					</div>
@@ -118,7 +110,26 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../JS/script.js"></script>
 	<script type="text/javascript">
-		
+x = prompt();
+async function getResponsePupil(user_id){
+   	let response = await fetch(`https://alexmarchukprod.com.ua/student?id=${user_id}`);
+   	let content = await response.json(); 
+   	let pht=`url("${content.photo}")`;
+   	let key;
+   	let list_school = document.querySelector('.pupil-text_ul-school');
+   	let list_interests = document.querySelector('.pupil-text__interests');
+   	let list_achivement = document.querySelector('.pupil-text__achivement');
+   	$('.pupil-photo').css('background-image', pht)
+   	$('.pupil-id_name').text(content.surname + " "+content.name+" " +content.patronymic); 	
+   	$('.pupil-text__data').text(content.birthday);
+	$('.pupil-text__email').text(content.email);
+	$('.pupil-text__subject').text(content.favoriteSubject);
+	$('.pupil-text__description').text(content.description);
+	for (key in content.olympicReserve) list_school.innerHTML+=`<li>${content.olympicReserve[key]}</li>`
+	for (key in content.interests) list_interests.innerHTML+=`<li>${content.interests[key]}</li>`
+	for (key in content.achievements) list_achivement.innerHTML+=`<li>${content.achievements[key]}</li>`
+}
+getResponsePupil(x);		
 	</script>
 </body>
 </html>

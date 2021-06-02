@@ -14,7 +14,6 @@ body,html{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	align-items: space-between;
 	height: 100%;
 }
 
@@ -198,8 +197,9 @@ a {text-decoration: none;}
     cursor: pointer;
 }
 .pupil-header{
+	position: relative;
 	width: 940px;
-    height: 130px;
+    min-height: 130px;
     padding: 40px 0px 40px 30px;
     border-radius: 5px;
     background-color: #749bd2;
@@ -208,16 +208,19 @@ a {text-decoration: none;}
   	color: #ffffff;
   	display: flex;
   	justify-content: space-between;
-  	ma
-
+  	align-items: center;
+}
+.pupil-id_name{
+	width: 490px;	
 }
 .Pic_pupil_item{
+	position: absolute;
 	display: block;
 	width: 380px;
     height: 200px;
     object-fit: contain;
-    margin-left: -50px;
-    margin-top: -110px;
+    right: 0;
+    bottom: 0;
 }
 .pupil-info{
 	width: 940px;
@@ -236,6 +239,10 @@ a {text-decoration: none;}
 .pupil-photo{
 	width: 380px;
     height: 421px;
+    background-size: contain;
+    background-position: center; 
+    background-repeat: no-repeat;
+
 }
 .pupil-data, .pupil-email, .pupil-subject{
     width: 540px;

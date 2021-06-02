@@ -1,10 +1,24 @@
-async function getResponse(){
-   	let response = await fetch('https://alexmarchukprod.com.ua/student?id=1')
-   	let content = await response.json()
-   	console.log(content.email)	
-	$('.pupil-text__email').text(content.email)  
-   }
-   //getResponse();
+//x = prompt();
+async function getResponsePupil(user_id){
+   	let response = await fetch(`https://alexmarchukprod.com.ua/student?id=${user_id}`);
+   	let content = await response.json(); 
+   	let pht=`url("${content.photo}")`;
+   	let key;
+   	let list_school = document.querySelector('.pupil-text_ul-school');
+   	let list_interests = document.querySelector('.pupil-text__interests');
+   	let list_achivement = document.querySelector('.pupil-text__achivement');
+   	$('.pupil-photo').css('background-image', pht)
+   	$('.pupil-id_name').text(content.surname + " "+content.name+" " +content.patronymic); 	
+   	$('.pupil-text__data').text(content.birthday);
+	$('.pupil-text__email').text(content.email);
+	$('.pupil-text__subject').text(content.favoriteSubject);
+	$('.pupil-text__description').text(content.description);
+	for (key in content.olympicReserve) list_school.innerHTML+=`<li>${content.olympicReserve[key]}</li>`
+	for (key in content.interests) list_interests.innerHTML+=`<li>${content.interests[key]}</li>`
+	for (key in content.achievements) list_achivement.innerHTML+=`<li>${content.achievements[key]}</li>`
+}
+//getResponsePupil(x);
+
 $(document).ready(function() {
    $(".logo").click(function(){
         window.location.href = '../index.html';
@@ -20,7 +34,7 @@ $(document).ready(function() {
  	
    //$.get('https://alexmarchukprod.com.ua/student/?id=1', function(data) {
    //		data.forEach((item) => {
-   //			const output = `<li">${item.interests}</li>`
+   //			const output = `<li>${item.interests}</li>`
    //			console.log(output);
    //			$('.pupil-text__interests').appendChild(output);
    //		});
