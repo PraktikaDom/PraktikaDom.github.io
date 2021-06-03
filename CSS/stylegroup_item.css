@@ -15,10 +15,26 @@
   margin: auto;
   margin-top: 80px;
 }
+.conteiner-group__block {
+  display: flex;
+}
+.conteiner-group__block1 {
+  width: 540px;
+  height: 638px;
+}
+.conteiner-group__block2 {
+  height: 638px;
+  display: flex;
+  align-items: center;
+}
+.conteiner-group__block2__img{
+  margin: 20px;
+}
+
 .conteiner-group__block1__list {
   width: 540px;
   height: 127px;
-  margin: 40px 20px 20px 0;
+  margin: 20px 20px 20px 0;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 1px 2px 0 #bcc1c8;
@@ -29,15 +45,19 @@
 }
 .conteiner-group__block1__list:nth-child(1){
   background-image: url("../IMG/self-improvement-black-48-dp.svg");
+  height: 127px;
 } 
 .conteiner-group__block1__list:nth-child(2){
   background-image: url("../IMG/group-black-48-dp.svg");
+  height: 127px;
 } 
 .conteiner-group__block1__list:nth-child(3){
   background-image: url("../IMG/school-black-48-dp.svg");
+  height: 127px;
 } 
 .conteiner-group__block1__list:nth-child(4){
   background-image: url("../IMG/text-snippet-black-48-dp.svg");
+  height: 197px;
 } 
 
 .conteiner-group__block1__main-caption{
