@@ -122,9 +122,6 @@
   letter-spacing: normal;
   color: #25282d;
   }
-.search__table-tdh_mod{
-	font-weight: 600;
-}
 .search__table-tr:hover .search__table-tdh{
   	background-color: #f4f5f6;
 }
@@ -132,7 +129,7 @@
 	padding-left: 40px;
 	width: 30%;
 }
-.search__table-tr:hover .search__table-tdh:nth-child(1){
+#table_body>.search__table-tr:hover .search__table-tdh:nth-child(1){
 	border-left: #e8b32e 5px solid;
 	padding-left: 35px;
 	width: 30%;
@@ -152,4 +149,8 @@
 	width: 40px;
   height: 40px;
   object-fit: contain;
+}
+
+.search__table-tdh_mod{
+	font-weight: 600;
 }
