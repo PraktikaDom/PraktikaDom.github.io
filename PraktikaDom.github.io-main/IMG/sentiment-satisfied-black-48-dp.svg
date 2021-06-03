@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="77" height="77" viewBox="0 0 77 77">
+    <defs>
+        <filter id="eyanosaiia" color-interpolation-filters="auto">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.603922 0 0 0 0 0.635294 0 0 0 0 0.674510 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g filter="url(#eyanosaiia)" transform="translate(-520 -1262) translate(490 142) translate(0 1060)">
+                    <g transform="translate(30 60)">
+                        <path d="M0 0L77 0 77 77 0 77z"/>
+                        <circle cx="49.729" cy="30.479" r="4.813" fill="#000" fill-rule="nonzero"/>
+                        <circle cx="27.271" cy="30.479" r="4.813" fill="#000" fill-rule="nonzero"/>
+                        <path fill="#000" fill-rule="nonzero" d="M38.5 51.333c-4.748 0-8.823-2.598-11.069-6.416h-5.358c2.567 6.577 8.952 11.229 16.427 11.229s13.86-4.652 16.427-11.23h-5.358c-2.246 3.819-6.32 6.417-11.069 6.417zm-.032-44.916C20.758 6.417 6.417 20.79 6.417 38.5s14.34 32.083 32.05 32.083c17.743 0 32.116-14.373 32.116-32.083S56.21 6.417 38.468 6.417zm.032 57.75c-14.18 0-25.667-11.486-25.667-25.667 0-14.18 11.486-25.667 25.667-25.667 14.18 0 25.667 11.486 25.667 25.667 0 14.18-11.486 25.667-25.667 25.667z"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
+    <defs>
+        <filter id="jijlvgomxa" color-interpolation-filters="auto">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 0.909804 0 0 0 0 0.701961 0 0 0 0 0.180392 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g filter="url(#jijlvgomxa)" transform="translate(-490 -160) translate(490 142) translate(0 18)">
+                    <path d="M0 0H22V22H0z"/>
+                    <path fill="#000" fill-rule="nonzero" d="M8.25 17.417L9.543 16.124 5.344 11.917 20.167 11.917 20.167 10.083 5.344 10.083 9.552 5.876 8.25 4.583 1.833 11z"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
