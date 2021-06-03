@@ -2,7 +2,7 @@
 async function getResponseGroup(){
     let response = await fetch(`https://alexmarchukprod.com.ua/groups`);
     let content = await response.json();
-     
+     console.log(content)
     let key;
     let table = document.querySelector('.search__table');
     
@@ -19,7 +19,7 @@ async function getResponseGroup(){
       else {
          table.innerHTML+=`
          <td class="search__table-tdh">${content[key].title}</td>
-         <td class="search__table-tdh">${content[key].formMaster.surname}</td>
+         <td class="search__table-tdh">${content[key].formMaster.surname} ${content[key].formMaster.name} ${content[key].formMaster.patronymic}</td>
          <td class="search__table-tdh">${content[key].students.length}</td>
          <td class="search__table-tdh"><img class="search__table-navig" src="../IMG/expand-more-white-48-dp.svg"></td>`
       }
