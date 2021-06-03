@@ -122,7 +122,7 @@
   letter-spacing: normal;
   color: #25282d;
   }
-.search__table-tr:hover .search__table-tdh{
+#table_body>.search__table-tr:hover .search__table-tdh{
   	background-color: #f4f5f6;
 }
 .search__table-tdh:nth-child(1){ 
