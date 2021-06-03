@@ -9,20 +9,19 @@ async function getResponseGroup(){
     
   if (true) {}
   for (key in content){
-      table.innerHTML+=`<tr class="search__table-tr"></tr>`;
       if (content[key].formMaster == null) {
-           table_body.innerHTML+=`
-         <td class="search__table-tdh td_del">${content[key].title}</td>
+         table_body.innerHTML+=`
+         <tr value="${content[key].id}" class="search__table-tr"><td class="search__table-tdh td_del" >${content[key].title}</td>
          <td class="search__table-tdh td_del">П.І.Б.</td>
          <td class="search__table-tdh td_del td_oppo">${content[key].students.length}</td>
-         <td class="search__table-tdh td_del"><img class="search__table-navig" src="../IMG/expand-more-white-48-dp.svg"></td>`
+         <td class="search__table-tdh td_del"><img class="search__table-navig" src="../IMG/expand-more-white-48-dp.svg"></td></tr>`
       }
       else {
          table_body.innerHTML+=`
-         <td class="search__table-tdh td_del">${content[key].title}</td>
+         <tr value="${content[key].id}" class="search__table-tr"><td class="search__table-tdh td_del">${content[key].title}</td>
          <td class="search__table-tdh td_del">${content[key].formMaster.surname} ${content[key].formMaster.name} ${content[key].formMaster.patronymic}</td>
          <td class="search__table-tdh td_del td_oppo">${content[key].students.length}</td>
-         <td class="search__table-tdh td_del"><img class="search__table-navig" src="../IMG/expand-more-white-48-dp.svg"></td>`
+         <td class="search__table-tdh td_del"><img class="search__table-navig" src="../IMG/expand-more-white-48-dp.svg"></td></tr>`
       }
    }
 }
