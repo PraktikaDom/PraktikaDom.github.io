@@ -71,7 +71,7 @@ a {text-decoration: none;}
 .header-text{
 	width: 299px;
 	height: 24px;
-	font-family: PlayfairDisplay;
+	font-family: Playfair Display;
 	font-size: 18px;
 	font-weight: 500;
 	color: white;
@@ -173,8 +173,7 @@ a {text-decoration: none;}
 /*pupil_item*/
 
 .pupil-wrapper{
-	width: 940px;
-	padding-top: 70px;	
+	width: 940px;	
 	margin-bottom: 40px;
 }
 .pupil-link__img{
@@ -213,7 +212,10 @@ a {text-decoration: none;}
 .pupil-id_name{
 	width: 490px;	
 }
-.Pic_pupil_item{
+.teacher-id_name{
+	width: 450px;	
+}
+.Pic_pupil_item, .Pic_teacher_item{
 	position: absolute;
 	display: block;
 	width: 380px;
@@ -236,7 +238,7 @@ a {text-decoration: none;}
     background-color: #ffffff;
     float: left;
 }
-.pupil-photo{
+.pupil-photo, .teacher-photo{
 	width: 380px;
     height: 421px;
     background-size: contain;
@@ -324,9 +326,78 @@ a {text-decoration: none;}
 }
 .teacher-wrapper{
 	width: 940px;
-	padding-top: 40px;	
 	margin-bottom: 40px;
 }
+
+/*Contacts*/
+.contacts__wrapper{
+	width: 940px;
+	display: flex;
+	justify-content: space-between;
+	padding-bottom: 40px;
+}
+.contacts__wrapper-one{
+	width: 380px;
+	height: 593px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.contacts__wrapper-two{
+	width: 460px;
+	height: 593px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+.wrapper-one__h1{
+	width: 176px;
+    height: 50px;
+    font-family: Ledger;
+    font-size: 36px;
+    color: #212121;
+}
+.wrapper-one__info{
+	width: 380px;
+	height: 190px;
+}
+.wrapper-info__labdat1{
+    font-family: AvenirNextCyr;
+    font-size: 18px;
+    color: #25282d;
+    width: 380px;
+    display: flex;
+    justify-content: space-between;
+}
+.wrapper-info__data{
+	width: 222px;
+	padding-bottom: 40px;	
+}
+.wrapper-one__map{
+	width: 380px;
+  	height: 233px;
+  	background: red;
+}
+.Pic_contacts{
+	width: 460px;
+    height: 238px;
+}
+.wrapper-info__h2{
+	width: 196px;
+    height: 42px;
+    font-family: Ledger;
+    font-size: 30px;
+    color: #25282d;
+    margin-bottom: 40px;
+}
+.wrapper-info__data2{
+	width: 460px;
+    font-family: AvenirNextCyr;
+    font-size: 18px;
+    color: #25282d;
+    padding-bottom: 20px;
+}
+
 
 /*Footer*/
 
