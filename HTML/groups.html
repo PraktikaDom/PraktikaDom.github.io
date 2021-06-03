@@ -8,7 +8,7 @@
 	<link rel="stylesheet" href="../CSS/style.css">
 	<link rel="stylesheet" href="../CSS/stylegroups.css">
 </head>
-<body onload="getResponseGroup();">
+<body>
 	<header class="header">
 
 		<div class="label-logo">
@@ -42,11 +42,12 @@
 			</div>
 			<table cellspacing="0" class="search__table">
 				<tr class="search__table-tr">
-					<td class="search__table-tdh .search__table-tdh_mod">Назва групи</td>
-					<td class="search__table-tdh .search__table-tdh_mod">ПІБ класного керівника</td>
-					<td class="search__table-tdh .search__table-tdh_mod">Кількість учнів</td>
-					<td class="search__table-tdh .search__table-tdh_mod"></td>
+					<td class="search__table-tdh search__table-tdh_mod">Назва групи</td>
+					<td class="search__table-tdh search__table-tdh_mod">ПІБ класного керівника</td>
+					<td class="search__table-tdh search__table-tdh_mod">Кількість учнів</td>
+					<td class="search__table-tdh search__table-tdh_mod"></td>
 				</tr>
+				<tbody id="table_body"></tbody>
 			</table>
 			<div class="search__group-info search__list"></div>
 			<div class="search__group search__list"></div>
@@ -61,7 +62,6 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="../JS/script.js"></script>
 	<script src="../JS/scriptgroups.js"></script>
 	
 </body>
