@@ -8,6 +8,7 @@
 	<link rel="icon" href="../IMG/logo.ico" sizes="32x32">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../JS/script_contacts.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap" async defer></script>
 </head>
 <body>
 	<header class="header">
@@ -49,7 +50,7 @@
 					</div>
 				</div>
 
-				<div class="wrapper-one__map"></div>	
+				<div class="wrapper-one__map" id="map"></div>	
 			</div>
 
 			<div class="contacts__wrapper-two">
@@ -62,7 +63,33 @@
 			</div>
 
 		</div>
+	</div>	
+	</div>		
 	</div>
+	<script>
+		function initMap() {
+			var pos = {lat: 49.092836323759876, lng:33.44578508616719};
+			var opt = {
+				center: pos,
+				zoom: 17
+			};
+			var myMap = new google.maps.Map(document.getElementById('map'),opt);
+
+			var marker = new google.maps.Marker({
+				position: pos,
+				map: myMap,
+				title: 'Ліцей "Політ"'
+			});
+			var info = new google.maps.InfoWindow({
+				content: '<h3>Ліцей "Політ</h3><p>Приходьте до нас</p>'
+			});
+
+			marker.addListener("click", function() {
+				info.open(myMap, marker);
+			});
+		}
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap" async defer></script>
 
 	<footer class="footer">
 
