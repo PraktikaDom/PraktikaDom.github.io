@@ -27,34 +27,67 @@
 	</header>
 
 <div class="conteiner-group">
-		<h1 class="conteiner-group__caption">Група <p id="group_caption"></p></h1>
+		<h1 style="display: flex;" class="conteiner-group__caption">Група &nbsp;<p id="group_caption"></p></h1>
 
 		<div class="conteiner-group__block">
 		<div class="conteiner-group__block1">
 
 			<div class="conteiner-group__block1__list">
 				<h2 class="conteiner-group__block1__main-caption">Класний керівник</h2><br>
-				<h2 class="conteiner-group__block1__side-caption">ващопізво</h2>
+				<h2 class="conteiner-group__block1__side-caption"><p id="class_keriv"></p></h2>
 			</div>
 
 			<div class="conteiner-group__block1__list">
 				<h2 class="conteiner-group__block1__main-caption">Кількість учнів</h2><br>
-				<h2 class="conteiner-group__block1__side-caption">ватшщжіващ</h2>
+				<h2 class="conteiner-group__block1__side-caption"><p id="kilkict"></p></h2>
 			</div>
 
 			<div class="conteiner-group__block1__list">
 				<h2 class="conteiner-group__block1__main-caption">Профіль (напрямок навчання)</h2><br>
-				<h2 class="conteiner-group__block1__side-caption">матщ</h2>
+				<h2 class="conteiner-group__block1__side-caption"><p id="specialization"></p></h2>
 			</div>
 
 			<div class="conteiner-group__block1__list">
 				<h2 class="conteiner-group__block1__main-caption">Предмети для поглибленого вивчення</h2><br>
-				<h2 class="conteiner-group__block1__side-caption">зівзфєхі</h2>
+				<h2 class="conteiner-group__block1__side-caption"><ul type="circle" id="advancedSubjects"></ul></h2>
 			</div>
 		</div>
 		<div class="conteiner-group__block2">
 			<img class="conteiner-group__block2__img" src="../IMG/pic-group-item.png">
-		</div></div>
+		</div>
+	</div>
+
+	<div class="conteiner-groups">
+		<h1 class="conteiner-groups__caption">Учні</h1>
+		<div class="search">
+			<input type="text" id="search-group-input" class="search__input focused" placeholder="Пошук..." >
+		<div class="search__conteiner-list">
+			<div class="search__group-sort search__list">
+				<h2 class="sorting-caption">Сортувати за:</h2>
+				<select class="search__sorting">
+					<option class="sorting-option">Замовченням</option>
+					<option class="sorting-option">Зростанням</option>
+					<option class="sorting-option">Спаданням</option>
+				</select>
+			</div>
+			<table cellspacing="0" class="search__table">
+				<tr class="search__table-tr">
+					<td class="search__table-tdh search__table-tdh_mod">Назва групи</td>
+					<td class="search__table-tdh search__table-tdh_mod">ПІБ</td>
+					<td class="search__table-tdh search__table-tdh_mod"></td>
+					<td class="search__table-tdh search__table-tdh_mod"></td>
+				</tr>
+				<tbody id="table_body">
+					<tr class="search__table-tr">
+			            <td id="unknown" colspan="4" style="text-align: center; color: #5c6470; display: none;" class="search__table-tdh">Даних не знайдено</td>
+	        		</tr>
+				</tbody>
+			</table>
+			<div class="search__group-info search__list"></div>
+			<div class="search__group search__list"></div>
+		</div>
+	</div>
+</div>
 	</div>
 		
 
@@ -67,7 +100,6 @@
 	</footer>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="../JS/script.js"></script>
 	<script src="../JS/script_group_item.js"></script>
 </body>
 </html>
