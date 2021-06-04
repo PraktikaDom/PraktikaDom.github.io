@@ -3,10 +3,21 @@ $(document).ready(function() {
         window.location.href = '../index.html';
     }); 
 
-   $(".pupil-link").click(function(){
-        window.location.href = 'group_item.html';
-    });
-  x = prompt();
+  function getURIParam(href, key, def) {
+      if (arguments.length == 2) def = null;
+          var qs = href.substring(href.indexOf('?') + 1);
+          var s = qs.split('&');
+      for (var k in s) {
+          var s2 = s[k].split('=');
+          if (s2[0] == key)
+              return decodeURIComponent(s2[1]);
+      }
+      return def;
+  }
+
+  var href = window.location.href;
+  var user_id = getURIParam(href, "id", 0);
+
   async function getResponsePupil(user_id){
       let response = await fetch(`https://alexmarchukprod.com.ua/student?id=${user_id}`);
       let content = await response.json(); 
@@ -27,6 +38,6 @@ $(document).ready(function() {
       if (content.achievements==null || content.achievements.length==0) list_achivement.innerHTML+=`<li>Немаю великих досягнень</li>`;
       else for (key in content.achievements) list_achivement.innerHTML+=`<li>${content.achievements[key]}</li>`;
   }
-  getResponsePupil(x);
+  getResponsePupil(user_id);
 
 });	

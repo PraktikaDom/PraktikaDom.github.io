@@ -2,12 +2,11 @@ async function getResponseGroup(){
     let response = await fetch(`https://alexmarchukprod.com.ua/groups`);
     let content = await response.json();
     let key;
-    let poop= 5;
     let table = document.querySelector('.search__table');
   for (key in content){
         if (content[key].formMaster == null) {
             table_body.innerHTML+=`
-            <tr id="id=${content[key].id}" class="search__table-tr" onclick="replace_win();">
+            <tr id="id=${content[key].id}" class="search__table-tr" onclick="replace_win(${content[key].id});">
             <td class="search__table-tdh td_del search_items" >${content[key].title}</td>
             <td class="search__table-tdh td_del">П.І.Б.</td>
             <td class="search__table-tdh td_del td_oppo">${content[key].students.length}</td>
@@ -15,7 +14,7 @@ async function getResponseGroup(){
         }
         else{
             table_body.innerHTML+=`
-            <tr id="id=${content[key].id}" class="search__table-tr" onclick="replace_win();">
+            <tr class="search__table-tr" onclick="replace_win(${content[key].id});">
             <td class="search__table-tdh td_del search_items">${content[key].title}</td>
             <td class="search__table-tdh td_del">${content[key].formMaster.surname} ${content[key].formMaster.name} ${content[key].formMaster.patronymic}</td>
             <td class="search__table-tdh td_del td_oppo">${content[key].students.length}</td>
@@ -24,6 +23,7 @@ async function getResponseGroup(){
    }
 }
 getResponseGroup();
+
 function sort_age() {
     var tbody =$('#table_body');
     tbody.find('tr').sort(function(a, b) {
@@ -35,11 +35,10 @@ function sort_age() {
           else return $(".td_oppo", b).text().localeCompare($(".td_oppo", a).text());
     }).appendTo(tbody);}
 
-function replace_win(){
-    alert(324);
-    alert(this.attr("id"));
-    window.location.href = 'group_item.html';
-}
+$(".search__sorting").change(function(){
+  sort_age();
+})
+
 document.querySelector("#search-group-input").oninput = function(){
     var phrase = document.getElementById('search-group-input');
     var table = document.getElementById('table_body');
@@ -59,4 +58,7 @@ document.querySelector("#search-group-input").oninput = function(){
         }
 
     }
+    
+    if ($("#table_body").find('tr[style="display: none;"]').length==$("#table_body").find('tr').length-1)  unknown.style.display = "";
+    else unknown.style.display = "none"; 
 }

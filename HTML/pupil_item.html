@@ -32,7 +32,7 @@
 		<div class="pupil-wrapper">
 			<div class="pupil-link">
 				<img src="../IMG/west-black-48-dp.svg" class="pupil-link__img">
-				<div class="pupil-link__a" href="group_item.html">Повернутися до групи</div>
+				<div class="pupil-link__a" onclick="ReGroup();" href="group_item.html">Повернутися до групи</div>
 			</div>
 			<div class="pupil-header">
 				<div class="pupil-id_name"></div>
@@ -108,5 +108,25 @@
 		<div class="footer_text">© Веб-сайт «Довідник наукового ліцею «Політ», 2021. Усі права захищені.</div>
 		
 	</footer>
+	<script type="text/javascript">
+		function getURIParamUD(href, key, def) {
+      if (arguments.length == 2) def = null;
+          var qs = href.substring(href.indexOf('*') + 1);
+          var s = qs.split('&');
+      for (var k in s) {
+          var s2 = s[k].split('=');
+          if (s2[0] == key)
+              return decodeURIComponent(s2[1]);
+      }
+      return def;
+  }
+
+  var href = window.location.href;
+  var user_group = getURIParamUD(href, "ud", 0);
+  function ReGroup(){
+  	var user_group = getURIParamUD(href, "ud", 0);
+    	window.location.href = `group_item.html?id=9`;
+  	}
+	</script>
 </body>
 </html>

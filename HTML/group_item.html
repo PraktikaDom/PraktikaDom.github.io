@@ -49,7 +49,7 @@
 
 			<div class="conteiner-group__block1__list">
 				<h2 class="conteiner-group__block1__main-caption">Предмети для поглибленого вивчення</h2><br>
-				<h2 class="conteiner-group__block1__side-caption"><ul type="circle" id="advancedSubjects"></ul></h2>
+				<h2 class="conteiner-group__block1__side-caption"><ul type="circle" id="advancedSubjects" style="list-style-type: none;"></ul></h2>
 			</div>
 		</div>
 		<div class="conteiner-group__block2">
@@ -62,14 +62,6 @@
 		<div class="search">
 			<input type="text" id="search-group-input" class="search__input focused" placeholder="Пошук..." >
 		<div class="search__conteiner-list">
-			<div class="search__group-sort search__list">
-				<h2 class="sorting-caption">Сортувати за:</h2>
-				<select class="search__sorting">
-					<option class="sorting-option">Замовченням</option>
-					<option class="sorting-option">Зростанням</option>
-					<option class="sorting-option">Спаданням</option>
-				</select>
-			</div>
 			<table cellspacing="0" class="search__table">
 				<tr class="search__table-tr">
 					<td class="search__table-tdh search__table-tdh_mod">Назва групи</td>
@@ -101,5 +93,25 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="../JS/script_group_item.js"></script>
+	<script type="text/javascript">
+		function getURIParam(href, key, def) {
+      if (arguments.length == 2) def = null;
+          var qs = href.substring(href.indexOf('?') + 1);
+          var s = qs.split('&');
+      for (var k in s) {
+          var s2 = s[k].split('=');
+          if (s2[0] == key)
+              return decodeURIComponent(s2[1]);
+      }
+      return def;
+  }
+
+  var href = window.location.href;
+  var user_id = getURIParam(href, "id", 0);
+  var user_group = user_id;
+		function replace_win(x){
+    		window.location.href = `pupil_item.html?id=${x}*ud=${user_group}`;
+		}
+	</script>
 </body>
 </html>

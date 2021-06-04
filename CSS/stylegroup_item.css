@@ -33,7 +33,7 @@
 
 .conteiner-group__block1__list {
   width: 540px;
-  height: 127px;
+  min-height: 127px;
   margin: 20px 20px 20px 0;
   padding: 25px 30px;
   border-radius: 5px;
@@ -42,6 +42,7 @@
   background-repeat: no-repeat;
   background-position: 30px;
   background-size: 77px 77px;
+  padding-bottom: 100px;
 }
 .conteiner-group__block1__list:nth-child(1){
   background-image: url("../IMG/self-improvement-black-48-dp.svg");
@@ -83,4 +84,7 @@
   line-height: normal;
   letter-spacing: normal;
   color: #25282d;
+}
+ul>li{
+  padding-bottom: 5px;
 }
