@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Групи ліцею</title>
+	<link rel="icon" href="../IMG/logo.ico" sizes="32x32">
+	<link rel="stylesheet" href="style.css">
+	<style type="text/css">
+		body
+{
+ text-align:center;
+ width:100%;
+ margin:0 auto;
+ padding:0px;
+ font-family:helvetica;
+ background-color:#B45F04;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width:995px;
+}
+#mytable
+{
+ text-align:center;
+}
+#mytable th
+{
+ color:white;
+ font-size:18px;
+ cursor:pointer;
+}
+#mytable td
+{
+ color:white;
+ font-size:17px;
+ border:1px solid;
+}
+	</style>
+</head>
+<body onload="getResponseGroup();">
+<body>
+<div id="wrapper">
+<table id="mytable" cellpadding="7" align="center">
+ <tr>
+  <th onclick="sort_name();">SORT NAME</th>
+  <th onclick="sort_age();">SORT AGE</th>
+ </tr>
+ <tbody id="table1">
+ <tr>
+  <td>Aman</td><td>Rahul</td><td class="td_oppo">28</td>
+ </tr>
+ <tr>
+  <td>Rahul</td><td>Rahul</td><td class="td_oppo">36</td>
+ </tr>
+ <tr>
+  <td>Amit</td><td>Rahul</td><td class="td_oppo">21</td>
+ </tr>
+ <tr>
+  <td>Suresh</td><td>Rahul</td><td class="td_oppo">34</td>
+ </tr>
+ <tr>
+  <td>Karan</td><td>Rahul</td><td class="td_oppo">14</td>
+ </tr>
+ <tr>
+  <td>Pooja</td><td>Rahul</td><td class="td_oppo">24</td>
+ </tr>
+ </tbody>
+</table>
+<select class="search__sorting" onchange="sort_age();">
+		<option class="sorting-option">none</option>
+		<option class="sorting-option">asc</option>
+		<option class="sorting-option">desc</option>
+</select>
+<input type="hidden" id="name_order" value="asc">
+<input type="hidden" id="age_order" value="asc">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+function sort_age() {
+ var tbody =$('#table1');
+ var tbody1 =$('#table1');
+
+ tbody.find('tr').sort(function(a, b) {
+  if($('.search__sorting').val()=='asc') return $(".td_oppo", a).text().localeCompare($('.td_oppo', b).text());
+  
+  else return $(".td_oppo", b).text().localeCompare($(".td_oppo", a).text());
+}).appendTo(tbody);
+	
+}
+</script>
+</body>
+</html>

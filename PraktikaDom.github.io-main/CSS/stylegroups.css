@@ -124,7 +124,6 @@
   }
 #table_body>.search__table-tr:hover .search__table-tdh{
   	background-color: #f4f5f6;
-  	cursor: pointer;
 }
 .search__table-tdh:nth-child(1){ 
 	padding-left: 40px;
@@ -134,7 +133,6 @@
 	border-left: #e8b32e 5px solid;
 	padding-left: 35px;
 	width: 30%;
-
 }
 .search__table-tdh:nth-child(2){
 	width: 30%;
@@ -156,4 +154,3 @@
 .search__table-tdh_mod{
 	font-weight: 600;
 }
-
