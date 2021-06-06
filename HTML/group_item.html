@@ -9,6 +9,13 @@
 	<link rel="stylesheet" href="../CSS/stylegroups.css">
 </head>
 <body>
+	<style>
+	#table_body > .border_rad:nth-last-child(1) > .search__table-tdh{
+		padding-top: 8px;
+		margin-bottom: -13px;
+		border-bottom: none;
+	}
+	</style>
 	<header class="header">
 
 		<div class="label-logo">
@@ -32,9 +39,10 @@
 		<div class="conteiner-group__block">
 		<div class="conteiner-group__block1">
 
-			<div class="conteiner-group__block1__list">
-				<h2 class="conteiner-group__block1__main-caption">Класний керівник</h2><br>
-				<h2 class="conteiner-group__block1__side-caption"><p id="class_keriv"></p></h2>
+			<div class="conteiner-group__block1__list conteiner-group__block1__list_keriv">
+				<div><h2 class="conteiner-group__block1__main-caption" style="width: 282px;">Класний керівник</h2><br>
+				<h2 class="conteiner-group__block1__side-caption" style="width: 282px;"><p id="class_keriv"></p></h2></div>
+				<img class="search__table-navig" style="margin-left: 30px;" src="../IMG/expand-more-white-48-dp.svg">
 			</div>
 
 			<div class="conteiner-group__block1__list">
@@ -64,7 +72,7 @@
 		<div class="search__conteiner-list">
 			<table cellspacing="0" class="search__table">
 				<tr class="search__table-tr">
-					<td class="search__table-tdh search__table-tdh_mod">Назва групи</td>
+					<td class="search__table-tdh search__table-tdh_mod">Фото</td>
 					<td class="search__table-tdh search__table-tdh_mod">ПІБ</td>
 					<td class="search__table-tdh search__table-tdh_mod"></td>
 					<td class="search__table-tdh search__table-tdh_mod"></td>
@@ -111,6 +119,9 @@
   var user_group = user_id;
 		function replace_win(x){
     		window.location.href = `pupil_item.html?id=${x}*ud=${user_group}`;
+		}
+		function to_keriv(x){
+    	window.location.href = `teacher_item.html?id=${x}`;
 		}
 	</script>
 </body>

@@ -6,7 +6,7 @@ async function getResponseGroup(){
   for (key in content){
         if (content[key].formMaster == null) {
             table_body.innerHTML+=`
-            <tr id="id=${content[key].id}" class="search__table-tr" onclick="replace_win(${content[key].id});">
+            <tr id="id=${content[key].id}" class="search__table-tr border_rad" onclick="replace_win(${content[key].id});">
             <td class="search__table-tdh td_del search_items" >${content[key].title}</td>
             <td class="search__table-tdh td_del">П.І.Б.</td>
             <td class="search__table-tdh td_del td_oppo">${content[key].students.length}</td>
@@ -14,13 +14,14 @@ async function getResponseGroup(){
         }
         else{
             table_body.innerHTML+=`
-            <tr class="search__table-tr" onclick="replace_win(${content[key].id});">
+            <tr class="search__table-tr border_rad" onclick="replace_win(${content[key].id});">
             <td class="search__table-tdh td_del search_items">${content[key].title}</td>
             <td class="search__table-tdh td_del">${content[key].formMaster.surname} ${content[key].formMaster.name} ${content[key].formMaster.patronymic}</td>
             <td class="search__table-tdh td_del td_oppo">${content[key].students.length}</td>
             <td class="search__table-tdh td_del"><img class="search__table-navig" src="../IMG/expand-more-white-48-dp.svg"></td></tr>`
         }
    }
+
 }
 getResponseGroup();
 
@@ -44,7 +45,6 @@ document.querySelector("#search-group-input").oninput = function(){
     var table = document.getElementById('table_body');
     var regPhrase = new RegExp(phrase.value, 'i');
     var flag = false;
-    console.log(table.rows.length);
     for (var i = 1; i < table.rows.length; i++) {
         flag = false;
         for (var j = table.rows[i].cells.length - 1; j >= 0; j--) {
@@ -53,12 +53,24 @@ document.querySelector("#search-group-input").oninput = function(){
         }
         if (flag) {
             table.rows[i].style.display = "";
-        } else {
+            table.rows[i].classList.add('border_rad');
+        } 
+        else {
             table.rows[i].style.display = "none";
+            table.rows[i].classList.remove('border_rad');
         }
-
     }
-    
-    if ($("#table_body").find('tr[style="display: none;"]').length==$("#table_body").find('tr').length-1)  unknown.style.display = "";
+    if ($("#table_body").find('tr[style="display: none;"]').length==$("#table_body").find('tr').length-1) unknown.style.display = "";
     else unknown.style.display = "none"; 
+    for (var i = 1; i<=$("#table_body").find('tr[style!="display: none;"]').length-1;i++){
+        max_len = $("#table_body").find('tr[style!="display: none;"]').length-1;
+        if ($("#table_body").find('tr[style!="display: none;"]')[i]==$("#table_body").find('tr[style!="display: none;"]')[max_len]) {
+            $("#table_body").find('tr[style!="display: none;"]')[i].classList.add('border_rad-tr');
+            $(".border_rad-tr td").addClass('border_rad-tdh');
+        }
+        else {
+            $(".border_rad-tr td").removeClass('border_rad-tdh')
+            $("#table_body").find('tr[style!="display: none;"]')[i].classList.remove('border_rad-tr');
+        }
+    }
 }

@@ -163,6 +163,14 @@ a {text-decoration: none;}
   	border: none;
   	z-index: 1;
   	cursor: pointer;
+  	transition: .3s;
+}
+.intro-button:hover{
+	background-color: #b88914;
+	transition: .3s;
+}
+.intro-button:active{
+	background-color: #6e520c;
 }
 .intro-pic{
 	width: 492px;
